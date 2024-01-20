@@ -25,4 +25,4 @@ else:
 	jal leaf_function
 	addi $sp, $sp, 4
 	lw $ra, 0($sp)
-	jr $ra	
+	jr $ra

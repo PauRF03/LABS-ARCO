@@ -39,7 +39,7 @@ Z: .space 96
 .text
 .align 2
 .globl main
-	main:
+main:
 		addi $sp, $sp, -4
 		sw $ra,0($sp)
 		addi $s0, $zero, 0 #i
@@ -113,7 +113,7 @@ Z: .space 96
 		lw $ra, 0($sp)
 		addi $sp, $sp, 4
 		jr $ra
-	.end main
+.end main
 
 callCache:
 	srl $t0, $a0, 4 #line

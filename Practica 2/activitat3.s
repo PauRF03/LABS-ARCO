@@ -4,20 +4,19 @@ Y: .space 64
 .text
 .globl main
 main:
-	la $t0, X
-	addi $t0, $t0, 48
-	la $t1, Y
-	addi $t1, $t1, 16
-
-	
-bucle:
-	lw $s1, 0($t0)
-	addi $s3, $s1, 10
-	sw $s3, 0($t1)
-	addi $t0, $t0, 4
-	addi $t1, $t1, -4
-	bne $t0, $t1, bucle
-	addi $t0, $zero, 0
-	addi $t1, $zero, 0
-	addi $s3, $zero, 0
-	addi $s1, $zero, 0
+		la $t0, X
+		addi $t0, $t0, 48
+		la $t1, Y
+		addi $t1, $t1, 16
+	bucle:
+		lw $s1, 0($t0)
+		addi $s3, $s1, 10
+		sw $s3, 0($t1)
+		addi $t0, $t0, 4
+		addi $t1, $t1, -4
+		bne $t0, $t1, bucle
+		addi $t0, $zero, 0
+		addi $t1, $zero, 0
+		addi $s3, $zero, 0
+		addi $s1, $zero, 0
+.end main

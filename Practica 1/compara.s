@@ -17,16 +17,14 @@ while:
 	b do
 exit:
 	.end main 
+
 compara:
 	sgt $t0, $a0, $a1
 	sub $v0, $a0, $a1
 	bnez $t0, return
-
 	seq $t0, $a0, $a1
 	sub $v0, $a0, $a0
 	bnez $t0, return
-
 	move $v0, $a0
-
 return:	
 	jr $ra
